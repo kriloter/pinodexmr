@@ -1,11 +1,20 @@
-# pinodexmr
+# pinodexmr - raspberry pi 4 personal private monero node
 
-## personal xmr node on raspi4
+## Goal
 
-HW:
-raspi4 2GB (helium rak miner v2), more RAM recommended
-axagon sata m.2 adapter
-ssd m2 wd red 500GB
+Run private monero node over anonimity network (tor) for personal use.
+
+## Hardware
+Coul'd run on almost any HW, I have extra raspberry pi 2GB at home so the choice is clear.
+- computer, [Raspberry Pi 4 model B 2GB (more RAM recommended)](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
+- external box for disk, [EEM2-U3C USB-C 3.2 Gen 1 - SATA M.2 box](https://www.axagon.eu/en/produkty/eem2-u3c)
+- SSD disk [^1], [WD Red™ SA500 NAS SATA SSD M.2 2280](https://www.westerndigital.com/products/internal-drives/wd-red-sata-m-2-ssd#WDS500G1R0B)
+- any SD card
+
+[^1]: use SSD drive, it's fast and reliable and and necessary to use as boot device
+
+## How do we proceed
+1. insert SSD drive into the 
 
 recommended boot from usb ssd instead of SDcard
 
