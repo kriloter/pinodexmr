@@ -2,19 +2,27 @@
 
 ## Goal
 
-Run private monero node over anonimity network (tor) for personal use.
+Run private monero node over anonymity network (tor) for personal use.
 
 ## Hardware
+
 Coul'd run on almost any HW, I have extra raspberry pi 2GB at home so the choice is clear.
-- computer, [Raspberry Pi 4 model B 2GB (more RAM recommended)](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
-- external box for disk, [EEM2-U3C USB-C 3.2 Gen 1 - SATA M.2 box](https://www.axagon.eu/en/produkty/eem2-u3c)
-- SSD disk [^1], [WD Red™ SA500 NAS SATA SSD M.2 2280](https://www.westerndigital.com/products/internal-drives/wd-red-sata-m-2-ssd#WDS500G1R0B)
-- any SD card
 
-[^1]: use SSD drive, it's fast and reliable and and necessary to use as boot device
+- Computer, [Raspberry Pi 4 model B 2GB (more RAM recommended)](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
+- External box for disk, [EEM2-U3C USB-C 3.2 Gen 1 - SATA M.2 box](https://www.axagon.eu/en/produkty/eem2-u3c)
+- SSD disk[^1], [WD Red™ SA500 NAS SATA SSD M.2 2280](https://www.westerndigital.com/products/internal-drives/wd-red-sata-m-2-ssd#WDS500G1R0B)
+- Any SD card[^2]
 
-## How do we proceed
-1. insert SSD drive into the 
+[^1]: Use SSD drive, it's fast and reliable and and necessary to use as boot device
+[^2]: Why any? since we want to boot from a USB SSD drive, we need SD card only to flash raspi4 EEPROM
+
+## In short, what steps are we going to take
+
+1. Assembly and connect HW
+2. Update bootloader to boot from USB
+3. Boot from SSD.
+4. Install and setup PiNode-XMR
+5. Start node and let it sync
 
 recommended boot from usb ssd instead of SDcard
 
