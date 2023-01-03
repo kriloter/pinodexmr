@@ -1,4 +1,10 @@
-# pinodexmr - raspberry pi 4 personal private monero node
+# PiNodeXMR - raspi4 personal private monero node
+
+## Sources
+
+>[PiNodeXMR Full manual](https://github.com/monero-ecosystem/PiNode-XMR/wiki/Manual#setup)
+>
+>[Video tutorial](https://youtu.be/riK8t_4llXw)
 
 ## Goal
 
@@ -12,11 +18,12 @@ Coul'd run on almost any HW, I have extra raspberry pi 2GB at home so the choice
 - External box for disk, [EEM2-U3C USB-C 3.2 Gen 1 - SATA M.2 box](https://www.axagon.eu/en/produkty/eem2-u3c)
 - SSD disk[^1], [WD Red™ SA500 NAS SATA SSD M.2 2280](https://www.westerndigital.com/products/internal-drives/wd-red-sata-m-2-ssd#WDS500G1R0B)
 - Any SD card[^2]
+- HDMI cable, micro HDMI -> HDMI (it is not absolutely necessary if you can handle headless setup)
 
 [^1]: Use SSD drive, it's fast and reliable and and necessary to use as boot device
 [^2]: Why any? since we want to boot from a USB SSD drive, we need SD card only to flash raspi4 EEPROM
 
-## In short, what steps are we going to take
+## What steps are we going to take
 
 1. Assembly and connect HW
 2. Update bootloader to boot from USB
@@ -24,10 +31,32 @@ Coul'd run on almost any HW, I have extra raspberry pi 2GB at home so the choice
 4. Install and setup PiNode-XMR
 5. Start node and let it sync
 
+## 1. Assembly and connect
+
+There's not much to write here ... assemble as best you can and according to the instructions of manufacturer,
+use USB3 port (blue), use old good ethernet cable not WIFI. Do not insert SD card and do not power on yet.
+To be sure connect raspi to external monitor.
+
+## 2. Update bootloader to boot from USB
+
+Why this? Because stock raspi will boot only from SD card and we want to boot from SSD drive and do not use SD card at all.
+Why? Because SSD disk is better than SD card but let's make sure it's plugged to the blue USB3 port!
+
 recommended boot from usb ssd instead of SDcard
 
 First of all we need to make raspi to boot from USB because default is only from SDcard.
 It's super easy, we need SDcard and [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+> [Updating the Bootloader](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#updating-the-bootloader)
+
+-> Insert SD Card to your computer and run [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+
+-> Misc utility images -> Bootloader -> SD Card Boot[^3] -> choose storage and write
+
+-> Boot the Raspberry Pi with the new image and wait for at least 10 seconds. The green activity LED will blink with a steady pattern and the HDMI display will be green on success.
+
+-> Power off the Raspberry Pi and remove the SD card.
+
+[^3]: Yes, SD Card Boot, Boot from SD Card if avaiable otherwise boot from USB
 
 choose OS
 
@@ -46,28 +75,6 @@ SD card Boot
 ![Alt text](images/snip4.png)
 
 choose SDcard and write image
-
-Raspberry Pi Imager provides a GUI for updating the bootloader and selecting the boot mode.
-
-    Download Raspberry Pi Imager
-
-    Select a spare SD card. The contents will get overwritten!
-
-    Launch Raspberry Pi Imager
-
-    Select Misc utility images under Operating System
-
-    Select Bootloader
-
-    Select a boot-mode i.e. SD (recommended), USB or Network.
-
-    Select SD card and then Write
-
-    Boot the Raspberry Pi with the new image and wait for at least 10 seconds.
-
-    The green activity LED will blink with a steady pattern and the HDMI display will be green on success.
-
-    Power off the Raspberry Pi and remove the SD card.
 
 ## Ubuntu on ssd
 
