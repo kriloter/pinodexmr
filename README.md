@@ -78,14 +78,14 @@ choose SDcard and write image
 
 ## Ubuntu on ssd
 
-download latest ubuntu server lts
+download latest ubuntu server lts  
 <https://ubuntu.com/download/raspberry-pi>
 
 connect ssd to computer
 
 use Raspberry Pi Imager to write downloaded image to disk
 
-after complited, plug usb drive to raspi, power on and let's boot to ubuntu server
+after completed, plug usb drive to raspi, power on and let's boot to ubuntu server
 
 raspi should be connected to LAN by ethernet cable
 
