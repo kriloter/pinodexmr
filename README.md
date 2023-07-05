@@ -103,17 +103,19 @@ IPv4 address for eth0:
 
 or
 
+```bash
 ip a |grep eth0
+```
 
 inet 192.168.x.x
 
 default user is ubuntu with password ubuntu, first login you need to change password and log in again
 
+```bash
 sudo apt update
-
 sudo apt full-upgrade
-
 wget -O - <https://raw.githubusercontent.com/monero-ecosystem/PiNode-XMR/master/Install-PiNode-XMR.sh> | bash
+```
 
 Follow the on screen instructions.
 
